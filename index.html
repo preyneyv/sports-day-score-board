@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <script src="lib/jquery.js"></script>
     <script src="js/main.js" defer></script>
     <title>Sports Day Score Board!</title>
@@ -9,22 +10,17 @@
   <body>
     <div id="current-event-container">
       <label for="current-event">Current Event</label>
-      <select id="current-event">
-        <option selected value="">Nothing</option>
-        <option>Race 1</option>
-        <option>Race 2</option>
-        <option>Race 3</option>
-      </select>
+      <input type="search" id="current-event" placeholder="What is the current event?">
     </div>
     <div id="house-container">
       <div class="house">
         <h1 class="house-heading">Poseidon</h1>
         <div class="house-score">
-          <input type="number" min="0" id="po-score" class="score-input" value="0">
+          <input type="number" min="0" id="po-score" class="score-input" data-change="po" value="0">
         </div>
         <div class="house-buttons">
-          <button id="po-subtract">-10</button>
-          <button id="po-add">+10</button>
+          <button class="score-subtract" data-change="po">-10</button>
+          <button class="score-add" data-change="po">+10</button>
         </div>
         <div class="house-animations">
           <div>
@@ -42,11 +38,11 @@
       <div class="house">
         <h1 class="house-heading">Phoenix</h1>
         <div class="house-score">
-          <input type="number" min="0" id="ph-score" class="score-input" value="0">
+          <input type="number" min="0" id="ph-score" class="score-input" data-change="ph" value="0">
         </div>
         <div class="house-buttons">
-          <button id="ph-subtract">-10</button>
-          <button id="ph-add">+10</button>
+          <button class="score-subtract" data-change="ph">-10</button>
+          <button class="score-add" data-change="ph">+10</button>
         </div>
         <div class="house-animations">
           <div>
@@ -64,11 +60,11 @@
       <div class="house">
         <h1 class="house-heading">Hercules</h1>
         <div class="house-score">
-          <input type="number" min="0" id="he-score" class="score-input" value="0">
+          <input type="number" min="0" id="he-score" class="score-input" data-change="he" value="0">
         </div>
         <div class="house-buttons">
-          <button id="he-subtract">-10</button>
-          <button id="he-add">+10</button>
+          <button class="score-subtract" data-change="he">-10</button>
+          <button class="score-add" data-change="he">+10</button>
         </div>
         <div class="house-animations">
           <div>
@@ -86,11 +82,11 @@
       <div class="house">
         <h1 class="house-heading">Caesar</h1>
         <div class="house-score">
-          <input type="number" min="0" id="ca-score" class="score-input" value="0">
+          <input type="number" min="0" id="ca-score" class="score-input" data-change="ca" value="0">
         </div>
         <div class="house-buttons">
-          <button id="ca-subtract">-10</button>
-          <button id="ca-add">+10</button>
+          <button class="score-subtract" data-change="ca">-10</button>
+          <button class="score-add" data-change="ca">+10</button>
         </div>
         <div class="house-animations">
           <div>
@@ -107,5 +103,6 @@
       </div>
 
     </div>
+    <button id="open-scoreboard">Open Scoreboard Window</button>
   </body>
 </html>

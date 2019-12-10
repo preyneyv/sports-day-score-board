@@ -66,18 +66,19 @@ body {
 }
 #current-event-container label {
   display: block;
-  opacity: 0.5;
+  opacity: 0.2;
   font-weight: bold;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   align-self: center;
-  position: relative;
-  top: 4px;
+  /* position: relative; */
+  /* top: 4px; */
 }
 
-#current-event-container select {
+#current-event-container input {
   width: 100%;
   font-size: 1.5em;
   border-radius: 0;
   border: 1px solid rgb(199, 199, 199);
   background: transparent;
+  padding: 8px 12px;
 }

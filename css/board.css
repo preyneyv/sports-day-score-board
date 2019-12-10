@@ -1,0 +1,50 @@
+* {
+  user-select: none;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+#board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#current-event-container {
+  background: black;
+  color: white;
+  display: flex;
+  padding: 16px;
+  font-size: 3em;
+}
+
+#current-event {
+  margin-left: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#house-scores {
+  display: grid;
+  gap: 32px;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+#house-scores .house {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-size: 10em;
+  color: white;
+  text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+#house-scores .house-po { background: blue; }
+#house-scores .house-ph { background: rgb(194, 41, 41); }
+#house-scores .house-ca { background: green; }
+#house-scores .house-he { background: orange; }
