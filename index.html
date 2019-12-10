@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="lib/jquery.js"></script>
+    <script src="js/main.js" defer></script>
+    <title>Sports Day Score Board!</title>
+  </head>
+  <body>
+    <div id="current-event-container">
+      <label for="current-event">Current Event</label>
+      <select id="current-event">
+        <option selected value="">Nothing</option>
+        <option>Race 1</option>
+        <option>Race 2</option>
+        <option>Race 3</option>
+      </select>
+    </div>
+    <div id="house-container">
+      <div class="house">
+        <h1 class="house-heading">Poseidon</h1>
+        <div class="house-score">
+          <input type="number" min="0" id="po-score" class="score-input" value="0">
+        </div>
+        <div class="house-buttons">
+          <button id="po-subtract">-10</button>
+          <button id="po-add">+10</button>
+        </div>
+        <div class="house-animations">
+          <div>
+            <select id="po-anim-win">
+              <option selected disabled value="-1">Win</option>
+            </select>
+          </div>
+          <div>
+            <select id="po-anim-lose">
+              <option selected disabled value="-1">Lose</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="house">
+        <h1 class="house-heading">Phoenix</h1>
+        <div class="house-score">
+          <input type="number" min="0" id="ph-score" class="score-input" value="0">
+        </div>
+        <div class="house-buttons">
+          <button id="ph-subtract">-10</button>
+          <button id="ph-add">+10</button>
+        </div>
+        <div class="house-animations">
+          <div>
+            <select id="ph-anim-win">
+              <option selected disabled value="-1">Win</option>
+            </select>
+          </div>
+          <div>
+            <select id="ph-anim-lose">
+              <option selected disabled value="-1">Lose</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="house">
+        <h1 class="house-heading">Hercules</h1>
+        <div class="house-score">
+          <input type="number" min="0" id="he-score" class="score-input" value="0">
+        </div>
+        <div class="house-buttons">
+          <button id="he-subtract">-10</button>
+          <button id="he-add">+10</button>
+        </div>
+        <div class="house-animations">
+          <div>
+            <select id="he-anim-win">
+              <option selected disabled value="-1">Win</option>
+            </select>
+          </div>
+          <div>
+            <select id="he-anim-lose">
+              <option selected disabled value="-1">Lose</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="house">
+        <h1 class="house-heading">Caesar</h1>
+        <div class="house-score">
+          <input type="number" min="0" id="ca-score" class="score-input" value="0">
+        </div>
+        <div class="house-buttons">
+          <button id="ca-subtract">-10</button>
+          <button id="ca-add">+10</button>
+        </div>
+        <div class="house-animations">
+          <div>
+            <select id="ca-anim-win">
+              <option selected disabled value="-1">Win</option>
+            </select>
+          </div>
+          <div>
+            <select id="ca-anim-lose">
+              <option selected disabled value="-1">Lose</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

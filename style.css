@@ -1,0 +1,83 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 20px;
+}
+
+/* House container */
+#house-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.house-heading {
+  text-align: center;
+  margin-top: 0;
+}
+
+.score-input {
+  font-size: 4em;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(199, 199, 199);
+  font-family: monospace;
+  padding: 8px 16px;
+}
+
+.house-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.house-buttons > button {
+  font-size: 2em;
+  padding: 16px 0;
+  background: white;
+  border: 1px solid rgb(199, 199, 199);
+  border-top: 0;
+  outline: 0;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.house-buttons > button:active {
+  background: #ddd;
+}
+
+.house-buttons > button:first-child {
+  border-right: 0;
+}
+
+.house-animations select {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.5em;
+  border-radius: 0;
+  border: 1px solid rgb(199, 199, 199);
+  background: transparent;
+}
+
+/* Current Events */
+#current-event-container {
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+#current-event-container label {
+  display: block;
+  opacity: 0.5;
+  font-weight: bold;
+  margin-bottom: 8px;
+  align-self: center;
+  position: relative;
+  top: 4px;
+}
+
+#current-event-container select {
+  width: 100%;
+  font-size: 1.5em;
+  border-radius: 0;
+  border: 1px solid rgb(199, 199, 199);
+  background: transparent;
+}
