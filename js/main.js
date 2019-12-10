@@ -26,6 +26,12 @@ function syncData() {
   scoreboardWindow.postMessage({data}, '*')
 }
 
+// Send animation to be played to scoreboard.
+function playAnimation(animation) {
+  if (!scoreboardWindow) return;
+  scoreboardWindow.postMessage({animation}, '*')
+}
+
 // Send the updated current event.
 $('#current-event').on('blur search', function() {
   data.current = $(this).val();
@@ -38,6 +44,7 @@ $(".score-input").on('blur', function() {
   syncData()
 })
 
+// Score helper buttons
 $(".score-subtract").on('click', function () {
   let target = $(this).attr('data-change');
   data.scores[target] = parseInt(data.scores[target], 10) - 10
@@ -45,10 +52,16 @@ $(".score-subtract").on('click', function () {
   $(`.score-input[data-change=${target}]`).val(data.scores[target])
   syncData();
 })
-
 $(".score-add").on('click', function () {
   let target = $(this).attr('data-change');
   data.scores[target] = parseInt(data.scores[target], 10) + 10
   $(`.score-input[data-change=${target}]`).val(data.scores[target])
   syncData();
+})
+
+// Animations
+$('.house-animations select').on('change', function() {
+  const targetAnim = $(this).val()
+  $(this).val('-1')
+  playAnimation(targetAnim)
 })

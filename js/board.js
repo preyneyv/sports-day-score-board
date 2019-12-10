@@ -8,6 +8,8 @@ let data = {
   }
 }
 
+let animationTimeout;
+
 window.addEventListener('message', e => {
   // Got an update object from the parent window.
   // Update the scoreboard
@@ -18,6 +20,7 @@ window.addEventListener('message', e => {
   }
   if (message.animation) {
     // Show the animation.
+    playAnimation(message.animation)
   }
 })
 
@@ -29,6 +32,18 @@ function updateScoreboard() {
   $("#house-scores .house-ca").text(data.scores.ca)
   $("#house-scores .house-he").text(data.scores.he)
 }
+
+
+function playAnimation(target) {
+  $("#animation-target").attr('src', `gifs/${target}.gif`)
+}
+
+$("#animation-target").on('load', function() {
+  clearTimeout(animationTimeout);
+  $("#animation").css({ opacity: 1 })
+
+  animationTimeout = setTimeout(() => $("#animation").css({ opacity: 0 }), 3000)
+})
 
 // On load, just do the update.
 updateScoreboard()
